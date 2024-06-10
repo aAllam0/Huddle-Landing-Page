@@ -1,0 +1,341 @@
+:root {
+  --pink: hsl(322, 100%, 66%);
+  --very-pale-cyan: hsl(193, 100%, 96%);
+  --very-dark-cyan: hsl(192, 100%, 9%);
+  --grayish-blue: hsl(208, 11%, 55%);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+}
+a {
+  display: block;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+header {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 62px;
+  position: relative;
+}
+header img {
+  width: 134px;
+}
+header a {
+  color: var(--very-dark-cyan);
+  font-weight: bold;
+  background-color: white;
+  padding: 10px 40px;
+  font-size: 0.8rem;
+  border-radius: 30px;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
+  position: relative;
+  overflow: hidden;
+}
+header a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(255 255 255 / 70%);
+  opacity: 0;
+  transition: 0.3s;
+}
+header a:hover::after {
+  opacity: 1;
+}
+.start {
+  background-color: var(--very-pale-cyan);
+  background-image: url(../images/bg-hero-desktop.svg);
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+.start .container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.start .text {
+  max-width: 435px;
+}
+.start .text p {
+  margin: 15px 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--very-dark-cyan);
+}
+.start .text a {
+  background-color: var(--pink);
+  width: fit-content;
+  padding: 20px 60px;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  margin-top: 25px;
+  font-size: 0.8rem;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.start .text a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(322deg 100% 79% / 50%);
+  opacity: 0;
+  transition: 0.3s;
+  z-index: -1;
+}
+.start .text a:hover::after {
+  opacity: 1;
+}
+.start .image img {
+  max-width: 100%;
+}
+@media (max-width: 767px) {
+  .start {
+    padding-top: 80px;
+  } 
+  .start .container {
+    flex-direction: column;
+  }
+  .start .text h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 600;
+  }
+  .start .text p {
+    text-align: center;
+  }
+  .start .text a {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+  }
+}
+/* End Section */
+main {
+  min-height: 100vh;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+main .container {
+  
+}
+main .box {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+  border-radius: 15px;
+  padding: 40px 40px 40px 85px;
+}
+main .box:not(:last-child) {
+  margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  main .box:first-child,
+  main .box:last-child {
+    flex-direction: row-reverse;
+  }
+}
+main .box .image img {
+  max-width: 100%;
+}
+main .box .text {
+  max-width: 400px;
+}
+main .box .text h2 {
+  margin-bottom: 10px;
+  color: var(--very-dark-cyan);
+  font-size: 1.3rem;
+}
+main .box .text p {
+  color: var(--grayish-blue);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+@media (max-width: 767px) {
+  main .box {
+    flex-direction: column;
+    padding: 40px;
+  }
+  main .box .text {
+    text-align: center;
+  }
+}
+/* End Section */
+.community-box {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  padding: 40px;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+  border-radius: 15px;
+  position: relative;
+  bottom: -92px;
+  margin-top: -92px;
+  background-color: white;
+}
+.community-box h2 {
+  margin-bottom: 10px;
+  color: var(--very-dark-cyan);
+  text-align: center  ;
+}
+.community-box a {
+  background-color: var(--pink);
+  width: fit-content;
+  padding: 15px 60px;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.8rem;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  margin: auto;
+}
+.community-box a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(322deg 100% 79% / 50%);
+  opacity: 0;
+  transition: 0.3s;
+  z-index: -1;
+}
+.community-box a:hover::after {
+  opacity: 1;
+}
+@media (max-width: 767px) {
+  .community-box {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 40px 20px;
+  }
+  .community-box h2 {
+    font-size: 1.1rem;
+  }
+}
+/* End Section */
+footer {
+  padding-top: 140px;
+  padding-bottom: 80px;
+  background-color: var(--very-dark-cyan);
+  color: white;
+}
+footer .container > img {
+  filter: brightness(0) invert(1) grayscale(100%);
+  margin-bottom: 20px;
+}
+footer .content {
+  display: flex;
+}
+footer .info ul li {
+  display: flex;
+  align-items: flex-start;
+}
+footer .info ul li:not(:last-child) {
+  margin-bottom: 20px;
+}
+footer .info ul img {
+  margin-right: 20px;
+}
+footer .info ul p {
+  max-width: 400px;
+  color: var(--grayish-blue);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+footer .links {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+footer .links ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+footer .links ul li a {
+  color: var(--grayish-blue);
+}
+footer .links ul li a:hover {
+  text-decoration: underline;
+}
+footer .social {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+footer .social a {
+  display: block;
+  color: white;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid white;
+  font-size: 0.8rem;
+  transition: 0.3s;
+}
+footer .social a:hover {
+  color: var(--pink);
+  border-color: var(--pink);
+}
+footer .social i {
+
+}
