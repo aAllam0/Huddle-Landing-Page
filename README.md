@@ -4,8 +4,8 @@
 
 ### Links
 
-- Solution URL: ()
-- Live Site URL: ()
+- Solution URL: [Front-end Mentor](https://www.frontendmentor.io/solutions/responsive-page-using-css-media-query-with-containers-snBjeulDC4)
+- Live Site URL: (https://aallam0.github.io/Huddle-Landing-Page/)
 
 ### Author
 
